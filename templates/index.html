@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конвертер валют</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">💱 Конвертер валют</h1>
+    <div class="converter-row">
+      <label for="fromCurrency">Из валюты:</label>
+
+      <select id="fromCurrency">
+        <option value="">Выберите валюту</option>
+      </select>
+
+      <input type="number" id="amount" value="1" />
+
+      <span>→</span>
+
+      <label for="toCurrency"><span>В валюту:</span></label>
+
+      <select id="toCurrency">
+        <option value="">Выберите валюту</option>
+      </select>
+
+      <button id="convertButton">Конвертировать</button>
+    </div>
+
+    <div id="result" class="result">
+      <p>Результат: <span id="conversionResult">Здесь будет результат</span></p>
+    </div>
+    <div id="lastUpdated" class="last-updated">
+        Последнее обновление: Загрузка...
+    </div>
+      
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
